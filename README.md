@@ -1,4 +1,4 @@
-# Skillful-LLM with AdapterHub
+# SkillfulLLM with AdapterHub
 ### Distilling Prompt Skills into Efficient Local AI Models
 
 🚀 Lightweight Skillful Models • ⚡ Local Deployment • 🔌 Plug-and-Play Adapters • 💸 Massive Cost Reduction
@@ -9,7 +9,7 @@
 
 ---
 
-**Skillful-LLM** is a framework for converting **prompt-based AI skills into efficient local models**.
+**SkillfulLLM** is a framework for converting **prompt-based AI skills into efficient local models**.
 
 Instead of repeatedly injecting large skill prompts into expensive LLM APIs, Skillful-LLM **distills skills into lightweight fine-tuned models** that run locally on a single GPU.
 
