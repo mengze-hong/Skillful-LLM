@@ -16,7 +16,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 TEST_FILE = PROJECT_ROOT / "data" / "browser_command_test.jsonl"
 OUTPUT_DIR = PROJECT_ROOT / "exp_command_eval" / "results"
-OUTPUT_JSON = OUTPUT_DIR / "base_skill_test30_eval.json“
+OUTPUT_JSON = OUTPUT_DIR / "small_skill_eval.json"
 
 ADAPTER_DIR = None
 PROMPT_FILE = PROJECT_ROOT / "prompts" / "browser_skill_prompt.txt"
