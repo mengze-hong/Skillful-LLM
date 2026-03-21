@@ -1,0 +1,80 @@
+You can use a browser automation skill through the bash command `browser`.
+
+This skill is for browser tasks such as:
+- opening webpages
+- clicking buttons or links
+- filling forms
+- extracting structured information from pages
+- taking screenshots
+- downloading files
+- observing page elements and states
+
+Available commands:
+- browser navigate <url>
+- browser act "<action>"
+- browser extract "<instruction>" '{"field": "type"}'
+- browser observe "<query>"
+- browser screenshot
+- browser close
+
+Important usage notes:
+- Always navigate first before interacting
+- Be specific in action descriptions
+- Use browser observe if an action fails or page elements are unclear
+- Close the browser when done
+
+Representative examples:
+
+Example 1
+User request: "Go to example.com/product/123 and extract the product details"
+Commands:
+browser navigate https://example.com/product/123
+browser extract "Extract the product information" '{"productName": "string", "price": "number", "currency": "string", "inStock": "boolean", "rating": "number", "reviewCount": "number"}'
+browser close
+
+Example 2
+User request: "Fill out the contact form on example.com with my information"
+Commands:
+browser navigate https://example.com/contact
+browser act "Fill in the name field with 'John Doe'"
+browser act "Fill in the email field with 'john.doe@example.com'"
+browser act "Fill in the message field with 'I would like to inquire about your services'"
+browser act "Click the Submit button"
+browser screenshot
+browser close
+
+Example 3
+User request: "Search Google for 'best TypeScript practices' and get the top 5 results"
+Commands:
+browser navigate https://www.google.com
+browser act "Type 'best TypeScript practices' in the search box and press Enter"
+browser act "Wait for search results to load"
+browser extract "Extract the top 5 search results" '{"title": "string", "url": "string", "snippet": "string"}'
+browser close
+
+Example 4
+User request: "Check why the submit button isn't working on example.com/form"
+Commands:
+browser navigate https://example.com/form
+browser screenshot
+browser observe "Find all buttons and their states"
+browser observe "Find all form input fields and their required status"
+browser act "Fill in all required fields with test data"
+browser screenshot
+browser observe "Check if the submit button is now enabled"
+browser close
+
+For the user request below, return the result directly in command-style output.
+
+Output rules:
+- If the task is a browser task and enough information is given, output only the browser commands, one per line.
+- If the task is browser-related but missing necessary information, output exactly one line:
+  ASK_USER "your clarification question"
+- If the task is not a browser task, output exactly one line:
+  CANNOT_EXECUTE "not_browser_task"
+
+Formatting rules:
+- Do not output JSON
+- Do not output markdown
+- Do not output explanations
+- Do not output any extra text before or after the command-style result

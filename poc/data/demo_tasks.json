@@ -1,0 +1,22 @@
+[
+  {
+    "id": "demo_001",
+    "task": "帮我去查一下微软 Copilot Pro 官网价格，如果页面里有多个套餐，把主要区别一起整理出来。"
+  },
+  {
+    "id": "demo_002",
+    "task": "帮我到 GitHub 上看一下 openai/openai-python 仓库，看看当前 star 数和 README 的一句简介。"
+  },
+  {
+    "id": "demo_003",
+    "task": "帮我找最近的 AI 芯片新闻，如果你需要我指定网站就先问我。"
+  },
+  {
+    "id": "demo_004",
+    "task": "帮我打开 docs.python.org 首页，先把顶部导航栏抓出来，然后告诉我接下来应该怎么找 asyncio 文档。"
+  },
+  {
+    "id": "demo_005",
+    "task": "帮我去 Notion pricing 页面截图，如果需要先打开官网再切过去，就按最合理的方式做。"
+  }
+]

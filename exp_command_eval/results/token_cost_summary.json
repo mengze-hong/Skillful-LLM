@@ -1,0 +1,28 @@
+{
+  "base_model": "/root/autodl-tmp/cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "num_epochs": 3,
+  "test_size": 30,
+  "finetuned_only_query": {
+    "avg_input_tokens": 47.06666666666667,
+    "avg_output_tokens": 42.266666666666666,
+    "avg_total_tokens": 89.33333333333333,
+    "sum_total_tokens_on_test30": 2680
+  },
+  "base_plus_skill_prompt": {
+    "avg_input_tokens": 663.0666666666667,
+    "avg_output_tokens": 40.1,
+    "avg_total_tokens": 703.1666666666666,
+    "sum_total_tokens_on_test30": 21095
+  },
+  "delta": {
+    "avg_saved_input_tokens_per_query": 616.0,
+    "avg_saved_output_tokens_per_query": -2.1666666666666643,
+    "avg_saved_total_tokens_per_query": 613.8333333333333
+  },
+  "training_cost": {
+    "train_examples": 254,
+    "train_tokens_per_epoch": 22321,
+    "train_tokens_total_all_epochs": 66963,
+    "break_even_queries": 109.08987238664133
+  }
+}

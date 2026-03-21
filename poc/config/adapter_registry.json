@@ -1,0 +1,8 @@
+{
+  "browser_executor_v1": {
+    "type": "lora_adapter",
+    "base_model": "Qwen2.5-7B-Instruct",
+    "adapter_path": "/root/browser_exec_project/poc/adapters/browser_executor_v1",
+    "capability": "browser_command_generation"
+  }
+}

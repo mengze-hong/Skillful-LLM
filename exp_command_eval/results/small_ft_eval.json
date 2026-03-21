@@ -1,0 +1,911 @@
+{
+  "summary": {
+    "total": 30,
+    "route_acc": 1.0,
+    "actionable_exact_acc": 0.8,
+    "chatter_free_acc": 1.0,
+    "avg_execute_line_f1": 0.9364102564102564,
+    "avg_execute_cmd_count_diff": 0.2,
+    "no_pathological_repetition_acc": 1.0,
+    "by_route": {
+      "execute": {
+        "total": 20,
+        "route_acc": 1.0,
+        "exact_acc": 0.8,
+        "first_cmd_acc": 0.95,
+        "avg_line_f1": 0.9364102564102564
+      },
+      "clarify": {
+        "total": 5,
+        "route_acc": 1.0,
+        "exact_acc": 0.6,
+        "nonempty_question_acc": 1.0
+      },
+      "cannot_execute": {
+        "total": 5,
+        "route_acc": 1.0,
+        "exact_acc": 1.0,
+        "reason_acc": 1.0
+      },
+      "unknown": {
+        "total": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "synthetic_exec_115",
+      "category": "clarify_missing_form_values",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Leave my contact details on the website.",
+      "gold_output": "ASK_USER \"Please provide the official website URL and the form values to fill, such as name, email, and message.\"",
+      "pred_raw": "ASK_USER \"Please provide the website URL and the form values to fill, such as name, email, and message.\"",
+      "gold_lines": [
+        "ASK_USER \"Please provide the official website URL and the form values to fill, such as name, email, and message.\""
+      ],
+      "pred_lines": [
+        "ASK_USER \"Please provide the website URL and the form values to fill, such as name, email, and message.\""
+      ],
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "route_ok": true,
+      "actionable_exact": false,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_question": "Please provide the official website URL and the form values to fill, such as name, email, and message.",
+      "pred_question": "Please provide the website URL and the form values to fill, such as name, email, and message.",
+      "nonempty_question_ok": true
+    },
+    {
+      "id": "synthetic_exec_066",
+      "category": "clarify_missing_login_credentials",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "zh",
+      "query": "到官网登录后看看控制台页面。",
+      "gold_output": "ASK_USER \"Please provide the login page URL, username, and password. If I should enter a specific page after login, please provide that path too.\"",
+      "pred_raw": "ASK_USER \"Please provide the official website URL and the username and password for login. If I should enter a specific page after login, please provide that path too.\"",
+      "gold_lines": [
+        "ASK_USER \"Please provide the login page URL, username, and password. If I should enter a specific page after login, please provide that path too.\""
+      ],
+      "pred_lines": [
+        "ASK_USER \"Please provide the official website URL and the username and password for login. If I should enter a specific page after login, please provide that path too.\""
+      ],
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "route_ok": true,
+      "actionable_exact": false,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_question": "Please provide the login page URL, username, and password. If I should enter a specific page after login, please provide that path too.",
+      "pred_question": "Please provide the official website URL and the username and password for login. If I should enter a specific page after login, please provide that path too.",
+      "nonempty_question_ok": true
+    },
+    {
+      "id": "synthetic_exec_058",
+      "category": "clarify_missing_source_page",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "zh",
+      "query": "把页面上的标题和链接整理一下。",
+      "gold_output": "ASK_USER \"Please provide the page URL, or tell me which website/page I should open first.\"",
+      "pred_raw": "ASK_USER \"Please provide the page URL, or tell me which website/page I should open first.\"",
+      "gold_lines": [
+        "ASK_USER \"Please provide the page URL, or tell me which website/page I should open first.\""
+      ],
+      "pred_lines": [
+        "ASK_USER \"Please provide the page URL, or tell me which website/page I should open first.\""
+      ],
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_question": "Please provide the page URL, or tell me which website/page I should open first.",
+      "pred_question": "Please provide the page URL, or tell me which website/page I should open first.",
+      "nonempty_question_ok": true
+    },
+    {
+      "id": "synthetic_exec_009",
+      "category": "clarify_missing_target_website",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "帮我看看最近关于 Anthropic 的新闻。",
+      "gold_output": "ASK_USER \"Which website should I use, or should I use a general search engine?\"",
+      "pred_raw": "ASK_USER \"Which website should I use, or should I use a general search engine?\"",
+      "gold_lines": [
+        "ASK_USER \"Which website should I use, or should I use a general search engine?\""
+      ],
+      "pred_lines": [
+        "ASK_USER \"Which website should I use, or should I use a general search engine?\""
+      ],
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_question": "Which website should I use, or should I use a general search engine?",
+      "pred_question": "Which website should I use, or should I use a general search engine?",
+      "nonempty_question_ok": true
+    },
+    {
+      "id": "synthetic_exec_105",
+      "category": "clarify_missing_url_and_target",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "zh",
+      "query": "打开那个页面以后帮我点一下指定按钮。",
+      "gold_output": "ASK_USER \"Please provide the page URL and specify which button or target element you want me to interact with.\"",
+      "pred_raw": "ASK_USER \"Please provide the page URL and specify which button or target element you want me to interact with.\"",
+      "gold_lines": [
+        "ASK_USER \"Please provide the page URL and specify which button or target element you want me to interact with.\""
+      ],
+      "pred_lines": [
+        "ASK_USER \"Please provide the page URL and specify which button or target element you want me to interact with.\""
+      ],
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_question": "Please provide the page URL and specify which button or target element you want me to interact with.",
+      "pred_question": "Please provide the page URL and specify which button or target element you want me to interact with.",
+      "nonempty_question_ok": true
+    },
+    {
+      "id": "synthetic_exec_001",
+      "category": "debug_disabled_login_button",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Check why the login button is disabled on example.com/login and inspect the page state first.",
+      "gold_output": "browser navigate https://example.com/login\nbrowser screenshot\nbrowser observe \"Find the login button and report whether it is enabled or disabled\"\nbrowser observe \"Find the username and password input fields and whether they are required\"\nbrowser close",
+      "pred_raw": "browser navigate https://example.com/login\nbrowser screenshot\nbrowser observe \"Find all buttons and their states\"\nbrowser observe \"Find all input fields and their required status\"\nbrowser act \"Fill in all required fields with test data\"\nbrowser screenshot\nbrowser observe \"Check if the login button is now enabled\"\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://example.com/login",
+        "browser screenshot",
+        "browser observe \"Find the login button and report whether it is enabled or disabled\"",
+        "browser observe \"Find the username and password input fields and whether they are required\"",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://example.com/login",
+        "browser screenshot",
+        "browser observe \"Find all buttons and their states\"",
+        "browser observe \"Find all input fields and their required status\"",
+        "browser act \"Fill in all required fields with test data\"",
+        "browser screenshot",
+        "browser observe \"Check if the login button is now enabled\"",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": false,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 0.4615384615384615,
+      "execute_cmd_count_diff": 3,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_064",
+      "category": "debug_submit_button_issue",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "帮我排查一下 example.com/form 的提交按钮为什么没反应，先把页面状态和证据抓出来。",
+      "gold_output": "browser navigate https://example.com/form\nbrowser screenshot\nbrowser observe \"Find all buttons and their states\"\nbrowser observe \"Find all form input fields and their required status\"\nbrowser act \"Fill in all required fields with test data\"\nbrowser screenshot\nbrowser observe \"Check if the submit button is now enabled\"\nbrowser close",
+      "pred_raw": "browser navigate https://example.com/form\nbrowser screenshot\nbrowser observe \"Find all buttons and their states\"\nbrowser observe \"Find all form input fields and their required status\"\nbrowser act \"Fill in all required fields with test data\"\nbrowser screenshot\nbrowser observe \"Check if the submit button is now enabled\"\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://example.com/form",
+        "browser screenshot",
+        "browser observe \"Find all buttons and their states\"",
+        "browser observe \"Find all form input fields and their required status\"",
+        "browser act \"Fill in all required fields with test data\"",
+        "browser screenshot",
+        "browser observe \"Check if the submit button is now enabled\"",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://example.com/form",
+        "browser screenshot",
+        "browser observe \"Find all buttons and their states\"",
+        "browser observe \"Find all form input fields and their required status\"",
+        "browser act \"Fill in all required fields with test data\"",
+        "browser screenshot",
+        "browser observe \"Check if the submit button is now enabled\"",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_044",
+      "category": "download_csv_file",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "帮我下载一下这个 CSV：data.example.org/exports/orders.csv",
+      "gold_output": "browser navigate https://data.example.org/exports/orders.csv\nbrowser act \"Wait for 5 seconds for the download to complete\"\nbrowser close",
+      "pred_raw": "browser navigate https://data.example.org/exports/orders.csv\nbrowser act \"Wait for 5 seconds for the download to complete\"\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://data.example.org/exports/orders.csv",
+        "browser act \"Wait for 5 seconds for the download to complete\"",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://data.example.org/exports/orders.csv",
+        "browser act \"Wait for 5 seconds for the download to complete\"",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_093",
+      "category": "download_pdf_file",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Download this PDF for me: download.demo-site.test/brochure.pdf",
+      "gold_output": "browser navigate https://download.demo-site.test/brochure.pdf\nbrowser act \"Wait for 5 seconds for the download to complete\"\nbrowser close",
+      "pred_raw": "browser navigate https://download.demo-site.test/brochure.pdf\nbrowser act \"Wait for 5 seconds for the download to complete\"\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://download.demo-site.test/brochure.pdf",
+        "browser act \"Wait for 5 seconds for the download to complete\"",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://download.demo-site.test/brochure.pdf",
+        "browser act \"Wait for 5 seconds for the download to complete\"",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_002",
+      "category": "extract_homepage_headlines",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "打开 Reddit r/MachineLearning 首页，把前 5 条帖子标题和链接提取出来。",
+      "gold_output": "browser navigate https://www.reddit.com/r/MachineLearning/\nbrowser extract \"Extract the top 5 post titles and URLs from the homepage\" '{\"posts\":[{\"title\":\"string\",\"url\":\"string\"}]}'\nbrowser close",
+      "pred_raw": "browser navigate https://www.reddit.com/r/MachineLearning/\nbrowser extract \"Extract the top 5 post titles and URLs from the homepage\" '{\"posts\":[{\"title\":\"string\",\"url\":\"string\"}]}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://www.reddit.com/r/MachineLearning/",
+        "browser extract \"Extract the top 5 post titles and URLs from the homepage\" '{\"posts\":[{\"title\":\"string\",\"url\":\"string\"}]}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://www.reddit.com/r/MachineLearning/",
+        "browser extract \"Extract the top 5 post titles and URLs from the homepage\" '{\"posts\":[{\"title\":\"string\",\"url\":\"string\"}]}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_031",
+      "category": "extract_latest_news_for_summarization",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Check the latest tech news on TechCrunch and extract the top 6 headlines, summaries, authors, and published dates for later summarization.",
+      "gold_output": "browser navigate https://techcrunch.com\nbrowser extract \"Extract the top 6 article headlines and their summaries\" '{\"articles\":[{\"headline\":\"string\",\"summary\":\"string\",\"author\":\"string\",\"publishedDate\":\"string\"}]}'\nbrowser close",
+      "pred_raw": "browser navigate https://techcrunch.com/\nbrowser extract \"Extract the top 6 article headlines and their summaries\" '{\"articles\":[{\"headline\":\"string\",\"summary\":\"string\",\"author\":\"string\",\"publishedDate\":\"string\"}]}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://techcrunch.com",
+        "browser extract \"Extract the top 6 article headlines and their summaries\" '{\"articles\":[{\"headline\":\"string\",\"summary\":\"string\",\"author\":\"string\",\"publishedDate\":\"string\"}]}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://techcrunch.com/",
+        "browser extract \"Extract the top 6 article headlines and their summaries\" '{\"articles\":[{\"headline\":\"string\",\"summary\":\"string\",\"author\":\"string\",\"publishedDate\":\"string\"}]}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": false,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 0.6666666666666666,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": false
+    },
+    {
+      "id": "synthetic_exec_004",
+      "category": "extract_product_page",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "帮我打开 example.com/product/1509，把 product name, price 和其他商品信息抓出来。",
+      "gold_output": "browser navigate https://example.com/product/1509\nbrowser extract \"Extract the product information\" '{\"productName\":\"string\",\"price\":\"number\",\"currency\":\"string\",\"inStock\":\"boolean\",\"rating\":\"number\",\"reviewCount\":\"number\"}'\nbrowser close",
+      "pred_raw": "browser navigate https://example.com/product/1509\nbrowser extract \"Extract the product information\" '{\"productName\":\"string\",\"price\":\"number\",\"currency\":\"string\",\"inStock\":\"boolean\",\"rating\":\"number\",\"reviewCount\":\"number\"}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://example.com/product/1509",
+        "browser extract \"Extract the product information\" '{\"productName\":\"string\",\"price\":\"number\",\"currency\":\"string\",\"inStock\":\"boolean\",\"rating\":\"number\",\"reviewCount\":\"number\"}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://example.com/product/1509",
+        "browser extract \"Extract the product information\" '{\"productName\":\"string\",\"price\":\"number\",\"currency\":\"string\",\"inStock\":\"boolean\",\"rating\":\"number\",\"reviewCount\":\"number\"}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_171",
+      "category": "extract_repository_overview",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Go to langchain-ai/langchain on GitHub and grab the repository overview and star count.",
+      "gold_output": "browser navigate https://github.com/langchain-ai/langchain\nbrowser extract \"Extract the repository name, short description, and star count\" '{\"repository\":\"string\",\"description\":\"string\",\"stars\":\"string\"}'\nbrowser close",
+      "pred_raw": "browser navigate https://github.com/langchain-ai/langchain\nbrowser extract \"Extract the repository name, description, and star count\" '{\"repository\":\"string\",\"description\":\"string\",\"stars\":\"string\"}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://github.com/langchain-ai/langchain",
+        "browser extract \"Extract the repository name, short description, and star count\" '{\"repository\":\"string\",\"description\":\"string\",\"stars\":\"string\"}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://github.com/langchain-ai/langchain",
+        "browser extract \"Extract the repository name, description, and star count\" '{\"repository\":\"string\",\"description\":\"string\",\"stars\":\"string\"}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": false,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 0.6666666666666666,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_003",
+      "category": "fill_contact_form",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "到 https://support.example.org/contact-us 帮我 submit contact form，姓名 Alice Chen，邮箱 bob@example.com，留言 Can someone get back to me about the API plan?。 截图确认一下。",
+      "gold_output": "browser navigate https://support.example.org/contact-us\nbrowser act \"Fill in the name field with 'Alice Chen'\"\nbrowser act \"Fill in the email field with 'bob@example.com'\"\nbrowser act \"Fill in the message field with 'Can someone get back to me about the API plan?'\"\nbrowser act \"Click the Submit button\"\nbrowser screenshot\nbrowser close",
+      "pred_raw": "browser navigate https://support.example.org/contact-us\nbrowser act \"Fill in the name field with 'Alice Chen'\"\nbrowser act \"Fill in the email field with 'bob@example.com'\"\nbrowser act \"Fill in the message field with 'Can someone get back to me about the API plan?'\"\nbrowser act \"Click the Submit button\"\nbrowser screenshot\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://support.example.org/contact-us",
+        "browser act \"Fill in the name field with 'Alice Chen'\"",
+        "browser act \"Fill in the email field with 'bob@example.com'\"",
+        "browser act \"Fill in the message field with 'Can someone get back to me about the API plan?'\"",
+        "browser act \"Click the Submit button\"",
+        "browser screenshot",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://support.example.org/contact-us",
+        "browser act \"Fill in the name field with 'Alice Chen'\"",
+        "browser act \"Fill in the email field with 'bob@example.com'\"",
+        "browser act \"Fill in the message field with 'Can someone get back to me about the API plan?'\"",
+        "browser act \"Click the Submit button\"",
+        "browser screenshot",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_067",
+      "category": "fill_feedback_form",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Please fill out the feedback form at support.example.org/feedback: Alice Chen, john.doe@example.com, 'The checkout page is confusing'.",
+      "gold_output": "browser navigate https://support.example.org/feedback\nbrowser act \"Fill in the name field with 'Alice Chen'\"\nbrowser act \"Fill in the email field with 'john.doe@example.com'\"\nbrowser act \"Fill in the message field with 'The checkout page is confusing'\"\nbrowser act \"Click the Submit button\"\nbrowser close",
+      "pred_raw": "browser navigate https://support.example.org/feedback\nbrowser act \"Fill in the name field with 'Alice Chen'\"\nbrowser act \"Fill in the email field with 'john.doe@example.com'\"\nbrowser act \"Fill in the message field with 'The checkout page is confusing'\"\nbrowser act \"Click the Submit button\"\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://support.example.org/feedback",
+        "browser act \"Fill in the name field with 'Alice Chen'\"",
+        "browser act \"Fill in the email field with 'john.doe@example.com'\"",
+        "browser act \"Fill in the message field with 'The checkout page is confusing'\"",
+        "browser act \"Click the Submit button\"",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://support.example.org/feedback",
+        "browser act \"Fill in the name field with 'Alice Chen'\"",
+        "browser act \"Fill in the email field with 'john.doe@example.com'\"",
+        "browser act \"Fill in the message field with 'The checkout page is confusing'\"",
+        "browser act \"Click the Submit button\"",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_042",
+      "category": "fill_newsletter_signup_form",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Sign me up for the newsletter on updates.example.org/subscribe with emma.li@example.com. Screenshot the confirmation page.",
+      "gold_output": "browser navigate https://updates.example.org/subscribe\nbrowser act \"Fill in the email field with 'emma.li@example.com'\"\nbrowser act \"Click the Subscribe button\"\nbrowser screenshot\nbrowser close",
+      "pred_raw": "browser navigate https://updates.example.org/subscribe\nbrowser act \"Fill in the email field with 'emma.li@example.com'\"\nbrowser act \"Click the Subscribe button\"\nbrowser screenshot\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://updates.example.org/subscribe",
+        "browser act \"Fill in the email field with 'emma.li@example.com'\"",
+        "browser act \"Click the Subscribe button\"",
+        "browser screenshot",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://updates.example.org/subscribe",
+        "browser act \"Fill in the email field with 'emma.li@example.com'\"",
+        "browser act \"Click the Subscribe button\"",
+        "browser screenshot",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_117",
+      "category": "inspect_navigation_and_buttons",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Go to docs.python.org/3/, collect the top navigation items, and check for a visible login button.",
+      "gold_output": "browser navigate https://docs.python.org/3/\nbrowser observe \"List the top navigation menu items\"\nbrowser observe \"Check whether there is a visible login button on the page\"\nbrowser close",
+      "pred_raw": "browser navigate https://docs.python.org/3/\nbrowser observe \"List the top navigation menu items\"\nbrowser observe \"Check whether there is a visible login button on the page\"\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://docs.python.org/3/",
+        "browser observe \"List the top navigation menu items\"",
+        "browser observe \"Check whether there is a visible login button on the page\"",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://docs.python.org/3/",
+        "browser observe \"List the top navigation menu items\"",
+        "browser observe \"Check whether there is a visible login button on the page\"",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_007",
+      "category": "login_and_open_dashboard",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "帮我登录 app.demo-site.test，用户名 emma_liu，密码 S3cur3Pwd!，然后进入 dashboard。",
+      "gold_output": "browser navigate https://app.demo-site.test/login\nbrowser act \"Fill in the username field with 'emma_liu'\"\nbrowser act \"Fill in the password field with 'S3cur3Pwd!'\"\nbrowser act \"Click the Login button\"\nbrowser act \"Wait for the page to fully load\"\nbrowser navigate https://app.demo-site.test/dashboard\nbrowser close",
+      "pred_raw": "browser navigate https://app.demo-site.test/login\nbrowser act \"Fill in the username field with 'emma_liu'\"\nbrowser act \"Fill in the password field with 'S3cur3Pwd!'\"\nbrowser act \"Click the Login button\"\nbrowser act \"Wait for the page to fully load\"\nbrowser navigate https://app.demo-site.test/dashboard\nbrowser screenshot\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://app.demo-site.test/login",
+        "browser act \"Fill in the username field with 'emma_liu'\"",
+        "browser act \"Fill in the password field with 'S3cur3Pwd!'\"",
+        "browser act \"Click the Login button\"",
+        "browser act \"Wait for the page to fully load\"",
+        "browser navigate https://app.demo-site.test/dashboard",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://app.demo-site.test/login",
+        "browser act \"Fill in the username field with 'emma_liu'\"",
+        "browser act \"Fill in the password field with 'S3cur3Pwd!'\"",
+        "browser act \"Click the Login button\"",
+        "browser act \"Wait for the page to fully load\"",
+        "browser navigate https://app.demo-site.test/dashboard",
+        "browser screenshot",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": false,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 0.9333333333333333,
+      "execute_cmd_count_diff": 1,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_187",
+      "category": "non_browser_general_reasoning",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "zh",
+      "query": "帮我分析一下这个项目风险。",
+      "gold_output": "CANNOT_EXECUTE \"not_browser_task\"",
+      "pred_raw": "CANNOT_EXECUTE \"not_browser_task\"",
+      "gold_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "pred_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "gold_route": "cannot_execute",
+      "pred_route": "cannot_execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_reason": "not_browser_task",
+      "pred_reason": "not_browser_task",
+      "reason_ok": true
+    },
+    {
+      "id": "synthetic_exec_018",
+      "category": "non_browser_local_file_edit",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "帮我 fix 一下这段 Python code 里的 bug。",
+      "gold_output": "CANNOT_EXECUTE \"not_browser_task\"",
+      "pred_raw": "CANNOT_EXECUTE \"not_browser_task\"",
+      "gold_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "pred_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "gold_route": "cannot_execute",
+      "pred_route": "cannot_execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_reason": "not_browser_task",
+      "pred_reason": "not_browser_task",
+      "reason_ok": true
+    },
+    {
+      "id": "synthetic_exec_079",
+      "category": "non_browser_math_problem",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "zh",
+      "query": "算一下 387 * 46。",
+      "gold_output": "CANNOT_EXECUTE \"not_browser_task\"",
+      "pred_raw": "CANNOT_EXECUTE \"not_browser_task\"",
+      "gold_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "pred_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "gold_route": "cannot_execute",
+      "pred_route": "cannot_execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_reason": "not_browser_task",
+      "pred_reason": "not_browser_task",
+      "reason_ok": true
+    },
+    {
+      "id": "synthetic_exec_012",
+      "category": "non_browser_text_summarization",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "zh",
+      "query": "请把这段文章压缩成三句话。",
+      "gold_output": "CANNOT_EXECUTE \"not_browser_task\"",
+      "pred_raw": "CANNOT_EXECUTE \"not_browser_task\"",
+      "gold_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "pred_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "gold_route": "cannot_execute",
+      "pred_route": "cannot_execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_reason": "not_browser_task",
+      "pred_reason": "not_browser_task",
+      "reason_ok": true
+    },
+    {
+      "id": "synthetic_exec_183",
+      "category": "non_browser_translation",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Translate this sentence into English.",
+      "gold_output": "CANNOT_EXECUTE \"not_browser_task\"",
+      "pred_raw": "CANNOT_EXECUTE \"not_browser_task\"",
+      "gold_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "pred_lines": [
+        "CANNOT_EXECUTE \"not_browser_task\""
+      ],
+      "gold_route": "cannot_execute",
+      "pred_route": "cannot_execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "gold_reason": "not_browser_task",
+      "pred_reason": "not_browser_task",
+      "reason_ok": true
+    },
+    {
+      "id": "synthetic_exec_014",
+      "category": "open_and_capture_page",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "去 openai.com/pricing 看一下，直接给我截个图。",
+      "gold_output": "browser navigate https://openai.com/pricing\nbrowser screenshot\nbrowser close",
+      "pred_raw": "browser navigate https://openai.com/pricing\nbrowser screenshot\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://openai.com/pricing",
+        "browser screenshot",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://openai.com/pricing",
+        "browser screenshot",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_057",
+      "category": "paginate_and_extract_products",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Go through the first 2 pages on store.example.net/items and collect all product details.",
+      "gold_output": "browser navigate https://store.example.net/items\nbrowser extract \"Extract all products on this page\" '{\"products\":[{\"name\":\"string\",\"price\":\"number\",\"imageUrl\":\"string\"}]}'\nbrowser act \"Click the Next Page button\"\nbrowser extract \"Extract all products on this page\" '{\"products\":[{\"name\":\"string\",\"price\":\"number\",\"imageUrl\":\"string\"}]}'\nbrowser close",
+      "pred_raw": "browser navigate https://store.example.net/items\nbrowser extract \"Extract all products on this page\" '{\"products\":[{\"name\":\"string\",\"price\":\"number\",\"imageUrl\":\"string\"}]}'\nbrowser act \"Click the Next Page button\"\nbrowser extract \"Extract all products on this page\" '{\"products\":[{\"name\":\"string\",\"price\":\"number\",\"imageUrl\":\"string\"}]}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://store.example.net/items",
+        "browser extract \"Extract all products on this page\" '{\"products\":[{\"name\":\"string\",\"price\":\"number\",\"imageUrl\":\"string\"}]}'",
+        "browser act \"Click the Next Page button\"",
+        "browser extract \"Extract all products on this page\" '{\"products\":[{\"name\":\"string\",\"price\":\"number\",\"imageUrl\":\"string\"}]}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://store.example.net/items",
+        "browser extract \"Extract all products on this page\" '{\"products\":[{\"name\":\"string\",\"price\":\"number\",\"imageUrl\":\"string\"}]}'",
+        "browser act \"Click the Next Page button\"",
+        "browser extract \"Extract all products on this page\" '{\"products\":[{\"name\":\"string\",\"price\":\"number\",\"imageUrl\":\"string\"}]}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_037",
+      "category": "paginate_job_listings",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "帮我从 careers.example.org/openings 的前 2 页招聘列表里抓职位名称和工作地点。",
+      "gold_output": "browser navigate https://careers.example.org/openings\nbrowser extract \"Extract all job titles and locations on this page\" '{\"jobs\":[{\"jobTitle\":\"string\",\"location\":\"string\"}]}'\nbrowser act \"Click the Next Page button\"\nbrowser extract \"Extract all job titles and locations on this page\" '{\"jobs\":[{\"jobTitle\":\"string\",\"location\":\"string\"}]}'\nbrowser close",
+      "pred_raw": "browser navigate https://careers.example.org/openings\nbrowser extract \"Extract all job titles and locations on this page\" '{\"jobs\":[{\"jobTitle\":\"string\",\"location\":\"string\"}]}'\nbrowser act \"Click the Next Page button\"\nbrowser extract \"Extract all job titles and locations on this page\" '{\"jobs\":[{\"jobTitle\":\"string\",\"location\":\"string\"}]}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://careers.example.org/openings",
+        "browser extract \"Extract all job titles and locations on this page\" '{\"jobs\":[{\"jobTitle\":\"string\",\"location\":\"string\"}]}'",
+        "browser act \"Click the Next Page button\"",
+        "browser extract \"Extract all job titles and locations on this page\" '{\"jobs\":[{\"jobTitle\":\"string\",\"location\":\"string\"}]}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://careers.example.org/openings",
+        "browser extract \"Extract all job titles and locations on this page\" '{\"jobs\":[{\"jobTitle\":\"string\",\"location\":\"string\"}]}'",
+        "browser act \"Click the Next Page button\"",
+        "browser extract \"Extract all job titles and locations on this page\" '{\"jobs\":[{\"jobTitle\":\"string\",\"location\":\"string\"}]}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_051",
+      "category": "search_click_and_extract_page",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Go to Google, look up 'browser automation stagehand github', click the 1th result, and extract the page title and the first two introductory paragraphs.",
+      "gold_output": "browser navigate https://www.google.com\nbrowser act \"Type 'browser automation stagehand github' in the search box and press Enter\"\nbrowser act \"Wait for search results to load\"\nbrowser act \"Click the 1st search result\"\nbrowser act \"Wait for the page to fully load\"\nbrowser extract \"Extract the page title and the first two introductory paragraphs\" '{\"pageTitle\":\"string\",\"introParagraph1\":\"string\",\"introParagraph2\":\"string\"}'\nbrowser close",
+      "pred_raw": "browser navigate https://www.google.com\nbrowser act \"Type 'browser automation stagehand github' in the search box and press Enter\"\nbrowser act \"Wait for search results to load\"\nbrowser act \"Click the 1st search result\"\nbrowser act \"Wait for the page to fully load\"\nbrowser extract \"Extract the page title and the first two introductory paragraphs\" '{\"pageTitle\":\"string\",\"introParagraph1\":\"string\",\"introParagraph2\":\"string\"}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://www.google.com",
+        "browser act \"Type 'browser automation stagehand github' in the search box and press Enter\"",
+        "browser act \"Wait for search results to load\"",
+        "browser act \"Click the 1st search result\"",
+        "browser act \"Wait for the page to fully load\"",
+        "browser extract \"Extract the page title and the first two introductory paragraphs\" '{\"pageTitle\":\"string\",\"introParagraph1\":\"string\",\"introParagraph2\":\"string\"}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://www.google.com",
+        "browser act \"Type 'browser automation stagehand github' in the search box and press Enter\"",
+        "browser act \"Wait for search results to load\"",
+        "browser act \"Click the 1st search result\"",
+        "browser act \"Wait for the page to fully load\"",
+        "browser extract \"Extract the page title and the first two introductory paragraphs\" '{\"pageTitle\":\"string\",\"introParagraph1\":\"string\",\"introParagraph2\":\"string\"}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_008",
+      "category": "search_engine_results_extraction",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Search Bing for 'Seattle weather this weekend' and extract the top 6 results.",
+      "gold_output": "browser navigate https://www.bing.com\nbrowser act \"Type 'Seattle weather this weekend' in the search box and press Enter\"\nbrowser act \"Wait for search results to load\"\nbrowser extract \"Extract the top 6 search results\" '{\"results\":[{\"title\":\"string\",\"url\":\"string\",\"snippet\":\"string\"}]}'\nbrowser close",
+      "pred_raw": "browser navigate https://www.bing.com\nbrowser act \"Type 'Seattle weather this weekend' in the search box and press Enter\"\nbrowser act \"Wait for search results to load\"\nbrowser extract \"Extract the top 6 search results\" '{\"results\":[{\"title\":\"string\",\"url\":\"string\",\"snippet\":\"string\"}]}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://www.bing.com",
+        "browser act \"Type 'Seattle weather this weekend' in the search box and press Enter\"",
+        "browser act \"Wait for search results to load\"",
+        "browser extract \"Extract the top 6 search results\" '{\"results\":[{\"title\":\"string\",\"url\":\"string\",\"snippet\":\"string\"}]}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://www.bing.com",
+        "browser act \"Type 'Seattle weather this weekend' in the search box and press Enter\"",
+        "browser act \"Wait for search results to load\"",
+        "browser extract \"Extract the top 6 search results\" '{\"results\":[{\"title\":\"string\",\"url\":\"string\",\"snippet\":\"string\"}]}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_034",
+      "category": "site_search_and_extract",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "en",
+      "query": "Go to OpenAI Docs, search for 'authentication', and collect the top 5 matches.",
+      "gold_output": "browser navigate https://platform.openai.com/docs\nbrowser act \"Type 'authentication' in the documentation search box and press Enter\"\nbrowser act \"Wait for search results to load\"\nbrowser extract \"Extract the top 5 search results\" '{\"results\":[{\"title\":\"string\",\"url\":\"string\",\"snippet\":\"string\"}]}'\nbrowser close",
+      "pred_raw": "browser navigate https://platform.openai.com/docs\nbrowser act \"Type 'authentication' in the documentation search box and press Enter\"\nbrowser act \"Wait for search results to load\"\nbrowser extract \"Extract the top 5 search results\" '{\"results\":[{\"title\":\"string\",\"url\":\"string\",\"snippet\":\"string\"}]}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://platform.openai.com/docs",
+        "browser act \"Type 'authentication' in the documentation search box and press Enter\"",
+        "browser act \"Wait for search results to load\"",
+        "browser extract \"Extract the top 5 search results\" '{\"results\":[{\"title\":\"string\",\"url\":\"string\",\"snippet\":\"string\"}]}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://platform.openai.com/docs",
+        "browser act \"Type 'authentication' in the documentation search box and press Enter\"",
+        "browser act \"Wait for search results to load\"",
+        "browser extract \"Extract the top 5 search results\" '{\"results\":[{\"title\":\"string\",\"url\":\"string\",\"snippet\":\"string\"}]}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    },
+    {
+      "id": "synthetic_exec_032",
+      "category": "video_search_results_extraction",
+      "source": "execution_synthetic_multilingual_v1",
+      "query_language": "mixed",
+      "query": "帮我在 YouTube 里查 LoRA fine tuning tutorial，提取前 5 条视频结果。",
+      "gold_output": "browser navigate https://www.youtube.com/\nbrowser act \"Type 'LoRA fine tuning tutorial' in the search box and press Enter\"\nbrowser act \"Wait for search results to load\"\nbrowser extract \"Extract the top 5 video titles and their channel names\" '{\"videos\":[{\"title\":\"string\",\"channel\":\"string\"}]}'\nbrowser close",
+      "pred_raw": "browser navigate https://www.youtube.com/\nbrowser act \"Type 'LoRA fine tuning tutorial' in the search box and press Enter\"\nbrowser act \"Wait for search results to load\"\nbrowser extract \"Extract the top 5 video titles and their channel names\" '{\"videos\":[{\"title\":\"string\",\"channel\":\"string\"}]}'\nbrowser close",
+      "gold_lines": [
+        "browser navigate https://www.youtube.com/",
+        "browser act \"Type 'LoRA fine tuning tutorial' in the search box and press Enter\"",
+        "browser act \"Wait for search results to load\"",
+        "browser extract \"Extract the top 5 video titles and their channel names\" '{\"videos\":[{\"title\":\"string\",\"channel\":\"string\"}]}'",
+        "browser close"
+      ],
+      "pred_lines": [
+        "browser navigate https://www.youtube.com/",
+        "browser act \"Type 'LoRA fine tuning tutorial' in the search box and press Enter\"",
+        "browser act \"Wait for search results to load\"",
+        "browser extract \"Extract the top 5 video titles and their channel names\" '{\"videos\":[{\"title\":\"string\",\"channel\":\"string\"}]}'",
+        "browser close"
+      ],
+      "gold_route": "execute",
+      "pred_route": "execute",
+      "route_ok": true,
+      "actionable_exact": true,
+      "chatter_free": true,
+      "pathological_repetition": false,
+      "execute_line_f1": 1.0,
+      "execute_cmd_count_diff": 0,
+      "execute_first_cmd_ok": true
+    }
+  ]
+}
