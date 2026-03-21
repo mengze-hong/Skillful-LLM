@@ -10,8 +10,8 @@ from poc.tools.browser_executor import list_available_adapters, run_executor
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 POC_ROOT = PROJECT_ROOT / "poc"
 
-DEMO_TASKS_FILE = PROJECT_ROOT / "agent_loop" / "demo_tasks.json"
-OUT_FILE = POC_ROOT / "results" / "agent_poc_results.json"
+DEMO_TASKS_FILE = PROJECT_ROOT / "data" / "demo_tasks.json"
+OUT_FILE = POC_ROOT / "results" / "agent_demo_results.json"
 
 PLANNER_MODEL = "qwen3.5-plus"
 PLANNER_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
