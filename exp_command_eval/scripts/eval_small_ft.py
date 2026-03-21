@@ -17,9 +17,21 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 TEST_FILE = PROJECT_ROOT / "data" / "browser_command_test.jsonl"
 OUTPUT_DIR = PROJECT_ROOT / "exp_command_eval" / "results"
-OUTPUT_JSON = OUTPUT_DIR / "ft_only_query_test30_eval.json"
+OUTPUT_JSON = OUTPUT_DIR / "small_ft_eval.json"
 
-ADAPTER_DIR = "/root/browser_exec_project/outputs/qwen7b_command_qlora_v3_balanced/final_adapter"
+def get_adapter_dir():
+    env_path = os.getenv("BROWSER_EXECUTOR_ADAPTER_DIR")
+    if env_path:
+        adapter_dir = Path(env_path)
+    else:
+        adapter_dir = PROJECT_ROOT / "outputs" / "qwen7b_command_qlora_v3_balanced" / "final_adapter"
+
+    if not adapter_dir.exists():
+        raise RuntimeError(f"Adapter directory not found: {adapter_dir}")
+
+    return str(adapter_dir)
+
+ADAPTER_DIR = get_adapter_dir()
 PROMPT_FILE = None
 
 MAX_NEW_TOKENS = 160
